@@ -1,0 +1,20 @@
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven { url "http://cdlnexus01:8081/nexus/content/groups/GradlePlugins/" }
+	maven { url "http://cdlnexus01:8081/nexus/content/groups/public/" }
+	mavenCentral()
+}
+
+dependencies {
+    // The production code uses the SLF4J logging API at compile time
+    compile 'org.slf4j:slf4j-api:1.7.14'
+
+    
+    testCompile 'junit:junit:4.12'
+}
